@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+
+* {
+padding: 0;
+margin: 0;
+}
+
+body {
+background-color: rgb(244, 244, 244);
+}
+.container {
+border:1px solid red;
+width: 1000px;
+margin: auto;
+margin-top: 3em;
+clear: left;
+}
+.wrap {
+border:1px solid yellow;
+/*-webkit-perspective:10;//会拉伸翻转
+-moz-perspective:10;*/
+-webkit-perspective:400;
+-moz-perspective:400;
+float: left;
+width: 220px;
+margin-right: 20px;
+}
+.image {
+border:1px solid green;
+width: 100%;
+height: 200px;
+-webkit-transform-style:preserve-3d;
+-webkit-transition:1.5s;
+-moz-transform-style:preserve-3d;
+-moz-transition:1.5s;
+}
+
+img {
+width: 220px;
+height: 200px;
+}
+
+.wrap:hover .image {
+-webkit-transform:rotateY(180deg);
+-moz-transform:rotateY(180deg);
+}
+.display {
+position: absolute;
+-webkit-backface-visibility:hidden;
+-moz-backface-visibility:hidden;
+;
+}
+ h3 {
+color: white;
+text-align: center;
+
+}
+.back {
+-webkit-transform:rotateY(180deg);
+-moz-transform:rotateY(180deg);
+background: -webkit-gradient(linear,left top,left bottom,from(#fdbb5a), to(#db5726));
+background: -moz-linear-gradient(top,#fdbb5a,#db5726);
+width: 220px;
+height: 200px;
+line-height: 200px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="wrap">
+<div class="image">
+<div class="display front">
+<img src="img/1.jpg">          
+</div>
+<div class=".display back">
+<h3>贾斯汀比伯1</h3>
+</div>		
+</div>
+</div>
+
+
+<div class="wrap">
+<div class="image">
+<div class="display front">
+<img src="img/2.jpg">
+</div>
+<div class=".display back">
+<h3>贾斯汀比伯2</h3>
+</div>		
+</div>
+</div>
+
+<div class="wrap">
+<div class="image">
+<div class="display front">
+<img src="img/1.jpg">
+</div>
+<div class=".display back">
+<h3>贾斯汀比伯3</h3>
+</div>		
+</div>
+</div>
+
+
+<div class="wrap">
+<div class="image">
+<div class="display front">
+<img src="img/2.jpg">
+</div>
+<div class=".display back">
+<h3>贾斯汀比伯4</h3>
+</div>		
+</div>
+</div>
+
+</div>
+	
+</body>
+</html>
